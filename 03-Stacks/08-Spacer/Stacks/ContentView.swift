@@ -14,7 +14,7 @@ struct ContentView: View {
             Titulo()
 
             HStack {
-                PrecioViews(title: "Basico", price: "9.99", subtitle: "Un curso", textColor: .white, backgroundColor: .green)
+                PrecioViews(title: "Basico", price: "9.99", subtitle: "Un curso", textColor: .black, backgroundColor: .green)
 
                 ZStack {
                     PrecioViews(title: "Premium", price: "29.99", subtitle: "Todos", textColor: .black, backgroundColor: .gray)
@@ -30,7 +30,7 @@ struct ContentView: View {
             }.padding()
             
             ZStack {
-                PrecioViews(title: "Gold", price: "99.99", subtitle: "De por vida", textColor: .white, backgroundColor: .black, icon: "lightbulb").padding(.horizontal)
+                PrecioViews(title: "Gold", price: "99.99", subtitle: "De por vida", textColor: .black, backgroundColor: .indigo, icon: "lightbulb").padding(.horizontal)
                 
                 Text("Todos los cursos de por vida")
                     .font(.system(.caption, design: .rounded))
@@ -86,7 +86,7 @@ struct PrecioViews: View {
             icon.map({
                 Image(systemName:$0)
                     .font(.largeTitle)
-                    .foregroundColor(.white)
+                    .foregroundColor(.yellow)
             })
             Text(title)
                 .font(.system(size: 27, design: .rounded))

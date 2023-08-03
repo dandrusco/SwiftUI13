@@ -13,7 +13,7 @@ struct ContentView: View {
             Titulo()
 
             ZStack {
-                PrecioViews(title: "Basico", price: "9.99", subtitle: "Un curso", textColor: .white, backgroundColor: .green, icon: "star")
+                PrecioViews(title: "Basico", price: "9.99", subtitle: "Un curso", textColor: .black, backgroundColor: .green, icon: "star")
 
                 ZStack {
                     PrecioViews(title: "Premium", price: "29.99", subtitle: "Todos", textColor: .black, backgroundColor: .gray, icon: "timer")
@@ -29,7 +29,7 @@ struct ContentView: View {
             
             
                 ZStack {
-                    PrecioViews(title: "Gold", price: "99.99", subtitle: "De por vida", textColor: .white, backgroundColor: .black, icon: "lightbulb")
+                    PrecioViews(title: "Gold", price: "99.99", subtitle: "De por vida", textColor: .black, backgroundColor: .indigo, icon: "lightbulb")
                     
                     Text("Todos los cursos de por vida")
                         .font(.system(.caption, design: .rounded))
