@@ -26,6 +26,7 @@ struct ContentView: View {
                 .trim(from: 0, to: 0.65)//Marcamos del 0 al 65%
                 .stroke(gradiente, lineWidth: 20)
                 .frame(width: 200, height: 200)
+                .rotationEffect(.degrees(-90)) //Para girar el relleno en sentido de horario
                 .overlay(VStack{
                     Text("65%")
                         .font(.system(size: 60, weight: .bold, design: .rounded))
