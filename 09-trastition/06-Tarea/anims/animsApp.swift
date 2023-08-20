@@ -1,14 +1,14 @@
 //
-//  transitionsApp.swift
-//  transitions
+//  animsApp.swift
+//  anims
 //
-//  Created by Danilo Andrusco on 19-08-23.
+//  Created by Danilo Andrusco on 14-08-23.
 //
 
 import SwiftUI
 
 @main
-struct transitionsApp: App {
+struct animsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
