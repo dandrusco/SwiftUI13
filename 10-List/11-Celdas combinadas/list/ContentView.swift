@@ -17,10 +17,20 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        List(courses) { course in
-            //5. Ahora simplemente cambiamos el CoursRow(course: course) por CoursFullImageRow(course: course)
-            /*CoursRow(course: course)*/
+        //1. Podemos utilizar los dos, para ello crearemos modificaremos estas lineas:
+        /*List(courses) { course in
             CoursFullImageRow(course: course)
+        }*/
+        //2. Deberemos llamar con indices agregando el id: \.self
+        List(courses.indices, id: \.self) { idx in
+            //3. Tomaremos el primer cursos para tamaño grande
+            if idx < 1{
+                CoursFullImageRow(course: courses[idx])
+            }
+            //4. El resto en CoursRow
+            else{
+                CoursRow(course: courses[idx])
+            }
         }
     }
 }
@@ -53,30 +63,26 @@ struct CoursRow: View {
     }
 }
 
-//1. la venjata de esto, es que ahora puedo crear una vista con una imagen Full
 struct CoursFullImageRow: View {
     var course : Course
     
     var body: some View {
-        //2. Lo creamos en un ZStack para poder apilarlo
         ZStack {
             Image(course.imagen)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(height: 200)
                 .cornerRadius(15)
-                //3. Para que el texto se pueda apreciar sobre las imagenes crearemos un overlay con un RoundedRectangle de color gris y una opacidad al 25%
                 .overlay(
                     RoundedRectangle(cornerRadius: 15)
                         .foregroundColor(.gray)
                         .opacity(0.25)
                 )
-            //4. Trabajaremos en el texto
             Text(course.name)
                 .font(.system(.headline, design: .rounded))
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .multilineTextAlignment(.center)//Centrar el texto
+                .multilineTextAlignment(.center)
         }
     }
 }

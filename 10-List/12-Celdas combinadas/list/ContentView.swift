@@ -5,29 +5,26 @@
 //  Created by Danilo Andrusco on 21-08-23.
 //
 
+//1. podemos crear un destacada, de esta manera el curso que nosotros queramos destacar sera el que se agrande
 import SwiftUI
 
 struct ContentView: View {
     
     var courses = [
         Course(name: "Swift desde cero", imagen: "swift"),
-        Course(name: "Python de cero a experto", imagen: "python"),
+        //3. Destacaremo el 2 curso
+        Course(name: "Python de cero a experto", imagen: "python", destacado: true),
         Course(name: "Interfaz grafica en Python", imagen: "interfazPython"),
         Course(name: "Hacking con Python", imagen: "hackPython")
     ]
     
     var body: some View {
-        //1. Podemos utilizar los dos, para ello crearemos modificaremos estas lineas:
-        /*List(courses) { course in
-            CoursFullImageRow(course: course)
-        }*/
-        //2. Deberemos llamar con indices agregando el id: \.self
         List(courses.indices, id: \.self) { idx in
-            //3. Tomaremos el primer cursos para tamaño grande
-            if idx < 1{
+            //4. cambiaremos la sentencia if
+            /*if idx < 1{*/
+            if courses[idx].destacado {
                 CoursFullImageRow(course: courses[idx])
             }
-            //4. El resto en CoursRow
             else{
                 CoursRow(course: courses[idx])
             }
@@ -45,6 +42,8 @@ struct Course : Identifiable {
     var id = UUID()
     var name : String
     var imagen : String
+    //2. Crearemos una variable que se destaque de tipo booleano, en pincipio false
+    var destacado : Bool = false
 }
 
 struct CoursRow: View {

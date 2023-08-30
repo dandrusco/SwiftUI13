@@ -18,11 +18,9 @@ struct ContentView: View {
     
     var body: some View {
         List(courses) { course in
-            //1. Con la tecla CMD pulsada le damos boton izquierdo y le damos en extraer sublista y la llamaaremos CoursRow()
-            //4. Podemos ver que ahora se nos generea el error en CoursRow() ya que deberemos modificarla
-            /*CoursRow()*/
-            //5. Pasandole course 
-            CoursRow(course: course)
+            //5. Ahora simplemente cambiamos el CoursRow(course: course) por CoursFullImageRow(course: course)
+            /*CoursRow(course: course)*/
+            CoursFullImageRow(course: course)
         }
     }
 }
@@ -40,12 +38,10 @@ struct Course : Identifiable {
 }
 
 struct CoursRow: View {
-    //3. Para solucionarlo crearemos una variable de tipo curso
     var course : Course
     
     var body: some View {
         HStack {
-            //2. Xcode se nos queja tanto en Image(course.imagen) como  en Text(course.name) ya que no tenemos course desde aqui
             Image(course.imagen)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -53,6 +49,34 @@ struct CoursRow: View {
                 .clipped()
                 .cornerRadius(30)
             Text(course.name)
+        }
+    }
+}
+
+//1. la venjata de esto, es que ahora puedo crear una vista con una imagen Full
+struct CoursFullImageRow: View {
+    var course : Course
+    
+    var body: some View {
+        //2. Lo creamos en un ZStack para poder apilarlo
+        ZStack {
+            Image(course.imagen)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 200)
+                .cornerRadius(15)
+                //3. Para que el texto se pueda apreciar sobre las imagenes crearemos un overlay con un RoundedRectangle de color gris y una opacidad al 25%
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .foregroundColor(.gray)
+                        .opacity(0.25)
+                )
+            //4. Trabajaremos en el texto
+            Text(course.name)
+                .font(.system(.headline, design: .rounded))
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)//Centrar el texto
         }
     }
 }
