@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B38A7C3C2AD5D1DD003F39F4 /* P1_ExpandableButtonSheetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C3B2AD5D1DD003F39F4 /* P1_ExpandableButtonSheetApp.swift */; };
+		B38A7C3E2AD5D1DD003F39F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C3D2AD5D1DD003F39F4 /* ContentView.swift */; };
+		B38A7C402AD5D1DF003F39F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38A7C3F2AD5D1DF003F39F4 /* Assets.xcassets */; };
+		B38A7C432AD5D1DF003F39F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38A7C422AD5D1DF003F39F4 /* Preview Assets.xcassets */; };
+		B38A7C4D2AD5D1DF003F39F4 /* P1_ExpandableButtonSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C4C2AD5D1DF003F39F4 /* P1_ExpandableButtonSheetTests.swift */; };
+		B38A7C572AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C562AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITests.swift */; };
+		B38A7C592AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C582AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITestsLaunchTests.swift */; };
+		B38A7C662AD5D279003F39F4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C652AD5D279003F39F4 /* Course.swift */; };
+		B38A7C682AD5EB3B003F39F4 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C672AD5EB3B003F39F4 /* CourseDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B38A7C492AD5D1DF003F39F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38A7C302AD5D1DD003F39F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38A7C372AD5D1DD003F39F4;
+			remoteInfo = "P1-ExpandableButtonSheet";
+		};
+		B38A7C532AD5D1DF003F39F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B38A7C302AD5D1DD003F39F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B38A7C372AD5D1DD003F39F4;
+			remoteInfo = "P1-ExpandableButtonSheet";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B38A7C382AD5D1DD003F39F4 /* P1-ExpandableButtonSheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P1-ExpandableButtonSheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38A7C3B2AD5D1DD003F39F4 /* P1_ExpandableButtonSheetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_ExpandableButtonSheetApp.swift; sourceTree = "<group>"; };
+		B38A7C3D2AD5D1DD003F39F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B38A7C3F2AD5D1DF003F39F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B38A7C422AD5D1DF003F39F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B38A7C482AD5D1DF003F39F4 /* P1-ExpandableButtonSheetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "P1-ExpandableButtonSheetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38A7C4C2AD5D1DF003F39F4 /* P1_ExpandableButtonSheetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_ExpandableButtonSheetTests.swift; sourceTree = "<group>"; };
+		B38A7C522AD5D1DF003F39F4 /* P1-ExpandableButtonSheetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "P1-ExpandableButtonSheetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38A7C562AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_ExpandableButtonSheetUITests.swift; sourceTree = "<group>"; };
+		B38A7C582AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_ExpandableButtonSheetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B38A7C652AD5D279003F39F4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		B38A7C672AD5EB3B003F39F4 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B38A7C352AD5D1DD003F39F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38A7C452AD5D1DF003F39F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38A7C4F2AD5D1DF003F39F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B38A7C2F2AD5D1DD003F39F4 = {
+			isa = PBXGroup;
+			children = (
+				B38A7C3A2AD5D1DD003F39F4 /* P1-ExpandableButtonSheet */,
+				B38A7C4B2AD5D1DF003F39F4 /* P1-ExpandableButtonSheetTests */,
+				B38A7C552AD5D1DF003F39F4 /* P1-ExpandableButtonSheetUITests */,
+				B38A7C392AD5D1DD003F39F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B38A7C392AD5D1DD003F39F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B38A7C382AD5D1DD003F39F4 /* P1-ExpandableButtonSheet.app */,
+				B38A7C482AD5D1DF003F39F4 /* P1-ExpandableButtonSheetTests.xctest */,
+				B38A7C522AD5D1DF003F39F4 /* P1-ExpandableButtonSheetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B38A7C3A2AD5D1DD003F39F4 /* P1-ExpandableButtonSheet */ = {
+			isa = PBXGroup;
+			children = (
+				B38A7C3B2AD5D1DD003F39F4 /* P1_ExpandableButtonSheetApp.swift */,
+				B38A7C652AD5D279003F39F4 /* Course.swift */,
+				B38A7C672AD5EB3B003F39F4 /* CourseDetailView.swift */,
+				B38A7C3D2AD5D1DD003F39F4 /* ContentView.swift */,
+				B38A7C3F2AD5D1DF003F39F4 /* Assets.xcassets */,
+				B38A7C412AD5D1DF003F39F4 /* Preview Content */,
+			);
+			path = "P1-ExpandableButtonSheet";
+			sourceTree = "<group>";
+		};
+		B38A7C412AD5D1DF003F39F4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B38A7C422AD5D1DF003F39F4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B38A7C4B2AD5D1DF003F39F4 /* P1-ExpandableButtonSheetTests */ = {
+			isa = PBXGroup;
+			children = (
+				B38A7C4C2AD5D1DF003F39F4 /* P1_ExpandableButtonSheetTests.swift */,
+			);
+			path = "P1-ExpandableButtonSheetTests";
+			sourceTree = "<group>";
+		};
+		B38A7C552AD5D1DF003F39F4 /* P1-ExpandableButtonSheetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B38A7C562AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITests.swift */,
+				B38A7C582AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITestsLaunchTests.swift */,
+			);
+			path = "P1-ExpandableButtonSheetUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B38A7C372AD5D1DD003F39F4 /* P1-ExpandableButtonSheet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38A7C5C2AD5D1DF003F39F4 /* Build configuration list for PBXNativeTarget "P1-ExpandableButtonSheet" */;
+			buildPhases = (
+				B38A7C342AD5D1DD003F39F4 /* Sources */,
+				B38A7C352AD5D1DD003F39F4 /* Frameworks */,
+				B38A7C362AD5D1DD003F39F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "P1-ExpandableButtonSheet";
+			productName = "P1-ExpandableButtonSheet";
+			productReference = B38A7C382AD5D1DD003F39F4 /* P1-ExpandableButtonSheet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B38A7C472AD5D1DF003F39F4 /* P1-ExpandableButtonSheetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38A7C5F2AD5D1DF003F39F4 /* Build configuration list for PBXNativeTarget "P1-ExpandableButtonSheetTests" */;
+			buildPhases = (
+				B38A7C442AD5D1DF003F39F4 /* Sources */,
+				B38A7C452AD5D1DF003F39F4 /* Frameworks */,
+				B38A7C462AD5D1DF003F39F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B38A7C4A2AD5D1DF003F39F4 /* PBXTargetDependency */,
+			);
+			name = "P1-ExpandableButtonSheetTests";
+			productName = "P1-ExpandableButtonSheetTests";
+			productReference = B38A7C482AD5D1DF003F39F4 /* P1-ExpandableButtonSheetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B38A7C512AD5D1DF003F39F4 /* P1-ExpandableButtonSheetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B38A7C622AD5D1DF003F39F4 /* Build configuration list for PBXNativeTarget "P1-ExpandableButtonSheetUITests" */;
+			buildPhases = (
+				B38A7C4E2AD5D1DF003F39F4 /* Sources */,
+				B38A7C4F2AD5D1DF003F39F4 /* Frameworks */,
+				B38A7C502AD5D1DF003F39F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B38A7C542AD5D1DF003F39F4 /* PBXTargetDependency */,
+			);
+			name = "P1-ExpandableButtonSheetUITests";
+			productName = "P1-ExpandableButtonSheetUITests";
+			productReference = B38A7C522AD5D1DF003F39F4 /* P1-ExpandableButtonSheetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B38A7C302AD5D1DD003F39F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					B38A7C372AD5D1DD003F39F4 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					B38A7C472AD5D1DF003F39F4 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = B38A7C372AD5D1DD003F39F4;
+					};
+					B38A7C512AD5D1DF003F39F4 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = B38A7C372AD5D1DD003F39F4;
+					};
+				};
+			};
+			buildConfigurationList = B38A7C332AD5D1DD003F39F4 /* Build configuration list for PBXProject "P1-ExpandableButtonSheet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B38A7C2F2AD5D1DD003F39F4;
+			productRefGroup = B38A7C392AD5D1DD003F39F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B38A7C372AD5D1DD003F39F4 /* P1-ExpandableButtonSheet */,
+				B38A7C472AD5D1DF003F39F4 /* P1-ExpandableButtonSheetTests */,
+				B38A7C512AD5D1DF003F39F4 /* P1-ExpandableButtonSheetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B38A7C362AD5D1DD003F39F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38A7C432AD5D1DF003F39F4 /* Preview Assets.xcassets in Resources */,
+				B38A7C402AD5D1DF003F39F4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38A7C462AD5D1DF003F39F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38A7C502AD5D1DF003F39F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B38A7C342AD5D1DD003F39F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38A7C682AD5EB3B003F39F4 /* CourseDetailView.swift in Sources */,
+				B38A7C662AD5D279003F39F4 /* Course.swift in Sources */,
+				B38A7C3E2AD5D1DD003F39F4 /* ContentView.swift in Sources */,
+				B38A7C3C2AD5D1DD003F39F4 /* P1_ExpandableButtonSheetApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38A7C442AD5D1DF003F39F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38A7C4D2AD5D1DF003F39F4 /* P1_ExpandableButtonSheetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B38A7C4E2AD5D1DF003F39F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38A7C572AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITests.swift in Sources */,
+				B38A7C592AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B38A7C4A2AD5D1DF003F39F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38A7C372AD5D1DD003F39F4 /* P1-ExpandableButtonSheet */;
+			targetProxy = B38A7C492AD5D1DF003F39F4 /* PBXContainerItemProxy */;
+		};
+		B38A7C542AD5D1DF003F39F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B38A7C372AD5D1DD003F39F4 /* P1-ExpandableButtonSheet */;
+			targetProxy = B38A7C532AD5D1DF003F39F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B38A7C5A2AD5D1DF003F39F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B38A7C5B2AD5D1DF003F39F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B38A7C5D2AD5D1DF003F39F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"P1-ExpandableButtonSheet/Preview Content\"";
+				DEVELOPMENT_TEAM = J2S2G7HNY9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.tectroya.P1-ExpandableButtonSheet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B38A7C5E2AD5D1DF003F39F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"P1-ExpandableButtonSheet/Preview Content\"";
+				DEVELOPMENT_TEAM = J2S2G7HNY9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.tectroya.P1-ExpandableButtonSheet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B38A7C602AD5D1DF003F39F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2S2G7HNY9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.tectroya.P1-ExpandableButtonSheetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/P1-ExpandableButtonSheet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/P1-ExpandableButtonSheet";
+			};
+			name = Debug;
+		};
+		B38A7C612AD5D1DF003F39F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2S2G7HNY9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.tectroya.P1-ExpandableButtonSheetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/P1-ExpandableButtonSheet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/P1-ExpandableButtonSheet";
+			};
+			name = Release;
+		};
+		B38A7C632AD5D1DF003F39F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2S2G7HNY9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.tectroya.P1-ExpandableButtonSheetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "P1-ExpandableButtonSheet";
+			};
+			name = Debug;
+		};
+		B38A7C642AD5D1DF003F39F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2S2G7HNY9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cl.tectroya.P1-ExpandableButtonSheetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "P1-ExpandableButtonSheet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B38A7C332AD5D1DD003F39F4 /* Build configuration list for PBXProject "P1-ExpandableButtonSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38A7C5A2AD5D1DF003F39F4 /* Debug */,
+				B38A7C5B2AD5D1DF003F39F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38A7C5C2AD5D1DF003F39F4 /* Build configuration list for PBXNativeTarget "P1-ExpandableButtonSheet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38A7C5D2AD5D1DF003F39F4 /* Debug */,
+				B38A7C5E2AD5D1DF003F39F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38A7C5F2AD5D1DF003F39F4 /* Build configuration list for PBXNativeTarget "P1-ExpandableButtonSheetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38A7C602AD5D1DF003F39F4 /* Debug */,
+				B38A7C612AD5D1DF003F39F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B38A7C622AD5D1DF003F39F4 /* Build configuration list for PBXNativeTarget "P1-ExpandableButtonSheetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38A7C632AD5D1DF003F39F4 /* Debug */,
+				B38A7C642AD5D1DF003F39F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B38A7C302AD5D1DD003F39F4 /* Project object */;
+}
