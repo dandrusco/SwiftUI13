@@ -37,7 +37,9 @@ struct Course: Identifiable {
 #if DEBUG
 var courses: [Course] = [
     Course(name: "Swift desde cero", 
-           description: "",
+           description: """
+            Sumérgete en el mundo de la programación con Swift, el lenguaje de programación de Apple. Aprende a desarrollar aplicaciones para iOS, macOS y más en este curso de programación en Swift. Desde los conceptos básicos hasta la creación de aplicaciones completas, este curso te ayudará a dominar Swift y a convertirte en un desarrollador de aplicaciones versátil y competente.
+            """,
            imagen: "swift",
            type: "Swift",
            priceLevel: 3),

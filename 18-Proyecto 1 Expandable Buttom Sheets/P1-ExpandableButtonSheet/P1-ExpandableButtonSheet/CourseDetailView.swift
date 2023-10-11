@@ -9,18 +9,35 @@
 import SwiftUI
 
 struct CourseDetailView: View {
+    
+    var course: Course
+    
     var body: some View {
-        VStack {
-            HandleBar()
-            TitleBar(titleBar: "Detalles del Curso.")
-            HederView()
-            DescriptionView()
+        //Con GeometryReader podemos capturar la geometria de la ventana
+        GeometryReader { geometry in
+            VStack {
+                Spacer()
+                HandleBar()
+                TitleBar(titleBar: "Detalles del Curso.")
+                // Solo sera scroleable la imagen y las descripciones
+                ScrollView(.vertical){
+                    HederView(course: courses[0])
+                    DescriptionView(icon: "dollarsign.circle.fill", content: "\(course.priceLevel)")
+                        .padding(.top)
+                    DescriptionView(icon: nil, content: "\(course.description)")
+                }
+            }
+            //Pintamos la tarjeta blanca con bordes redondeados
+            .background(Color.white)
+            .cornerRadius(15, antialiased: true)
+            .offset(y: geometry.size.height*0.4)
         }
     }
 }
 
 #Preview {
-    CourseDetailView()
+    CourseDetailView(course: courses[0])
+        .background(Color.gray)
 }
 //7. Crearemos una barra
 struct HandleBar: View {
@@ -39,19 +56,58 @@ struct TitleBar: View {
         Text(titleBar)
             .font(.headline)
             .foregroundStyle(.primary)
+            .padding()
     }
 }
 
 //9. Programaremos la cabecera
 struct HederView: View {
+    var course: Course
+    
     var body: some View {
-        Text("")
+        Image(course.imagen)
+            .resizable()
+            .scaledToFit()
+            .overlay(
+                HStack{
+                    VStack(alignment: .leading){
+                        Spacer()
+                        Text(course.name)
+                            .foregroundStyle(.white)
+                            .font(.system(.title, design: .rounded))
+                            .bold()
+                            .padding(5)
+                            .background(Color.gray)
+                            .cornerRadius(5)
+                        Text(course.type)
+                            .font(.system(.subheadline, design: .rounded))
+                            .foregroundStyle(.white)
+                            .padding(5)
+                            .background(Color.blue)
+                            .cornerRadius(5)
+                    }
+                    Spacer()
+                }
+                    .padding()
+            )
     }
 }
 
 //9. Programaremos la descripcion
 struct DescriptionView: View {
+    var icon: String?
+    var content: String
+    
     var body: some View {
-        Text("")
+        HStack{
+            if icon != nil {
+                Image(systemName: icon!)
+                    .padding(.trailing, 10)
+            }
+            Text(content)
+                .font(.system(.body, design: .rounded))
+            Spacer()
+        }
+        .padding(.horizontal)
     }
 }
