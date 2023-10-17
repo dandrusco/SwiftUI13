@@ -10,6 +10,10 @@ import SwiftUI
 
 struct CourseDetailView: View {
     
+    @GestureState private var dragState = DragState.none
+    
+    @State private var offset: CGFloat = 0
+    
     var course: Course
     
     var body: some View {
@@ -21,16 +25,23 @@ struct CourseDetailView: View {
                 TitleBar(titleBar: "Detalles del Curso.")
                 // Solo sera scroleable la imagen y las descripciones
                 ScrollView(.vertical){
-                    HederView(course: courses[0])
+                    HederView(course: course)
                     DescriptionView(icon: "dollarsign.circle.fill", content: "\(course.priceLevel)")
                         .padding(.top)
                     DescriptionView(icon: nil, content: "\(course.description)")
                 }
+                .disabled(true)
             }
             //Pintamos la tarjeta blanca con bordes redondeados
             .background(Color.white)
             .cornerRadius(15, antialiased: true)
-            .offset(y: geometry.size.height*0.4)
+            .offset(y: geometry.size.height*0.4 + dragState.translation.height+offset)
+            .animation(.interpolatingSpring(stiffness: 200, damping: 50, initialVelocity: 10))
+            .edgesIgnoringSafeArea(.all)
+            .gesture(DragGesture()
+                .updating($dragState){(value, state, transaction) in
+                    state = DragState.dragging(translation: value.translation)
+            })
         }
     }
 }

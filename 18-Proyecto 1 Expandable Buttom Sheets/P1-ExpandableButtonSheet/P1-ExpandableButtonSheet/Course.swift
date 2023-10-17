@@ -42,21 +42,25 @@ var courses: [Course] = [
             """,
            imagen: "swift",
            type: "Swift",
-           priceLevel: 3),
-    Course(name: "Python de cero a experto", 
-           description: "",
+           priceLevel: 37000),
+    Course(name: "Python de cero a experto",
+           description: """
+            Lorem ipsum dolor sit amet consectetur adipiscing elit turpis, mauris eget auctor gravida scelerisque lectus metus nibh, facilisi congue ad molestie eleifend primis quis. Tristique nostra ut sapien vulputate nam netus, montes eros class mauris consequat, luctus fringilla dapibus ullamcorper senectus. Laoreet nisl facilisis massa nam erat quisque eleifend turpis pulvinar orci, sodales lobortis neque volutpat mi curae mus dapibus porttitor habitasse, dis tellus vel imperdiet tempus ac eget feugiat dui.
+
+            Conubia nec a diam nascetur nam pellentesque rutrum pretium dis, lacus feugiat morbi iaculis tempus velit auctor sagittis, platea bibendum imperdiet lectus quisque torquent donec fames. Etiam feugiat nibh vestibulum augue nam aenean imperdiet diam ullamcorper, est viverra egestas massa fermentum inceptos accumsan sapien consequat eget, dui fusce nascetur interdum curabitur sollicitudin tellus leo. Platea ante class per potenti convallis pulvinar torquent nunc aliquet lacinia blandit, ultricies duis parturient rhoncus magna id inceptos nec hac eget placerat, leo tortor arcu senectus lobortis maecenas nam pellentesque porta ligula.
+            """,
            imagen: "python",
            type: "Python",
-           priceLevel: 4),
-    Course(name: "Interfaz grafica en Python", 
-           description: "",
+           priceLevel: 67000),
+    Course(name: "Interfaz grafica en Python",
+           description: "456",
            imagen: "interfazPython",
            type: "Python",
-           priceLevel: 2),
+           priceLevel: 24000),
     Course(name: "Hacking con Python", 
-           description: "",
+           description: "789",
            imagen: "hackPython",
            type: "Python",
-           priceLevel: 5)
+           priceLevel: 199000)
 ]
 #endif

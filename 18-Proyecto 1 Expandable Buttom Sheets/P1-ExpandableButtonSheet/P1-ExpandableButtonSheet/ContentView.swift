@@ -8,16 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showCourseDetail = false
+    
+    @State private var selectedCourse: Course?
+    
     var body: some View {
-        //6. Crearemos el arrays de cursos
-        NavigationView{
-            List{
-                ForEach(courses){ course in
-                    BasicRow(course: course)
+        ZStack{
+            NavigationView{
+                List{
+                    ForEach(courses){ course in
+                        BasicRow(course: course)
+                            .onTapGesture {
+                                self.showCourseDetail = true
+                                self.selectedCourse = course
+                        }
+                    }
+                }
+            .navigationBarTitle("Cursos Online")
+            }
+            .offset(y: self.showCourseDetail ? -150: 0)
+            .animation(.easeIn(duration: 0.25), value: showCourseDetail)
+            
+            if showCourseDetail{
+                
+                BlanketView(color: .gray)
+                    .opacity(0.5)
+                    .onTapGesture {
+                        self.showCourseDetail = false
+                    }
+                
+                self.selectedCourse.map{
+                    CourseDetailView(course: $0)
+                        .transition(.move(edge: .bottom))
                 }
             }
-            .navigationBarTitle("Cursos Online")
+            
         }
+        
     }
 }
 
@@ -38,5 +66,18 @@ struct BasicRow: View {
                 .cornerRadius(10)
             Text(course.name)
         }
+    }
+}
+
+//Crearemos una manta para cuando se ingrese a un curso
+struct BlanketView: View {
+    var color: Color
+    var body: some View {
+        VStack{
+            Spacer()
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: .infinity)
+        .background(color)
+        .edgesIgnoringSafeArea(.all)
     }
 }

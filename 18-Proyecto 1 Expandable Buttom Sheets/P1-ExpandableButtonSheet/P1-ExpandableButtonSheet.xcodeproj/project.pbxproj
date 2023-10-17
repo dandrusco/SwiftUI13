@@ -16,6 +16,7 @@
 		B38A7C592AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C582AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITestsLaunchTests.swift */; };
 		B38A7C662AD5D279003F39F4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C652AD5D279003F39F4 /* Course.swift */; };
 		B38A7C682AD5EB3B003F39F4 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A7C672AD5EB3B003F39F4 /* CourseDetailView.swift */; };
+		B3C7F2DB2ADED63F00C8A6B3 /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7F2DA2ADED63F00C8A6B3 /* DragState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B38A7C582AD5D1DF003F39F4 /* P1_ExpandableButtonSheetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P1_ExpandableButtonSheetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B38A7C652AD5D279003F39F4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		B38A7C672AD5EB3B003F39F4 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+		B3C7F2DA2ADED63F00C8A6B3 /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B38A7C3B2AD5D1DD003F39F4 /* P1_ExpandableButtonSheetApp.swift */,
+				B3C7F2DA2ADED63F00C8A6B3 /* DragState.swift */,
 				B38A7C652AD5D279003F39F4 /* Course.swift */,
 				B38A7C672AD5EB3B003F39F4 /* CourseDetailView.swift */,
 				B38A7C3D2AD5D1DD003F39F4 /* ContentView.swift */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B38A7C682AD5EB3B003F39F4 /* CourseDetailView.swift in Sources */,
+				B3C7F2DB2ADED63F00C8A6B3 /* DragState.swift in Sources */,
 				B38A7C662AD5D279003F39F4 /* Course.swift in Sources */,
 				B38A7C3E2AD5D1DD003F39F4 /* ContentView.swift in Sources */,
 				B38A7C3C2AD5D1DD003F39F4 /* P1_ExpandableButtonSheetApp.swift in Sources */,
