@@ -14,7 +14,11 @@ struct CourseDetailView: View {
     
     @State private var offset: CGFloat = 0
     
+    @State private var cardState = CardState.half
+    
     var course: Course
+    
+    @Binding var isShow: Bool
     
     var body: some View {
         //Con GeometryReader podemos capturar la geometria de la ventana
@@ -30,25 +34,53 @@ struct CourseDetailView: View {
                         .padding(.top)
                     DescriptionView(icon: nil, content: "\(course.description)")
                 }
-                .disabled(true)
+                .disabled(cardState == .half || dragState.isDragging)
             }
             //Pintamos la tarjeta blanca con bordes redondeados
             .background(Color.white)
             .cornerRadius(15, antialiased: true)
             .offset(y: geometry.size.height*0.4 + dragState.translation.height+offset)
-            .animation(.interpolatingSpring(stiffness: 200, damping: 50, initialVelocity: 10))
+            .animation(.interpolatingSpring(stiffness: 200, damping: 50, initialVelocity: 10), value:cardState)
             .edgesIgnoringSafeArea(.all)
             .gesture(DragGesture()
                 .updating($dragState){(value, state, transaction) in
                     state = DragState.dragging(translation: value.translation)
-            })
+            }
+                .onEnded({ (value) in
+                    switch cardState {
+                    case .half:
+                        //Humbral supérior, si es superado, transicion a estado full
+                        if value.translation.height < -0.25*geometry.size.height {
+                            offset = -0.3*geometry.size.height
+                            cardState = .full
+                        }
+                        //Umbral inferior, si es superando, ocultar la vista
+                        if value.translation.height > 0.25*geometry.size.height{
+                            isShow = false
+                        }
+                        break
+                    case .full:
+                        //Umbrar pequeño , si es superado transision a estado half
+                        if value.translation.height > 0.25*geometry.size.height{
+                            offset = 0
+                            cardState = .half
+                        }
+                        //Umbral grande, si es superado, ocultar la tarjeta
+                        if value.translation.height > 0.75*geometry.size.height{
+                            isShow = false
+                        }
+                        break
+                    }
+                })
+            )
         }
     }
 }
 
 #Preview {
-    CourseDetailView(course: courses[0])
+    CourseDetailView(course: courses[0], isShow: .constant(true))
         .background(Color.gray)
+        .edgesIgnoringSafeArea(.all)
 }
 //7. Crearemos una barra
 struct HandleBar: View {
@@ -121,4 +153,10 @@ struct DescriptionView: View {
         }
         .padding(.horizontal)
     }
+}
+
+//Creamos un enumerado para ver si maximizamos o cerramos la carjeta
+enum CardState {
+    case half
+    case full
 }

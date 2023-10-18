@@ -29,4 +29,13 @@ enum DragState {
             return false
         }
     }
+    
+    var isDragging: Bool {
+        switch self {
+        case .dragging:
+            return true
+        default:
+            return false
+        }
+    }
 }
