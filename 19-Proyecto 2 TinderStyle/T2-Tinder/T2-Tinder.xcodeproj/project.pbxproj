@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B33408A92AE93B8B00F38C14 /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33408A82AE93B8B00F38C14 /* DragState.swift */; };
 		B36F8B9F2AE6FF8C0012C2FE /* T2_TinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F8B9E2AE6FF8C0012C2FE /* T2_TinderApp.swift */; };
 		B36F8BA12AE6FF8C0012C2FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F8BA02AE6FF8C0012C2FE /* ContentView.swift */; };
 		B36F8BA32AE6FF8D0012C2FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36F8BA22AE6FF8D0012C2FE /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B33408A82AE93B8B00F38C14 /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 		B36F8B9B2AE6FF8C0012C2FE /* T2-Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "T2-Tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36F8B9E2AE6FF8C0012C2FE /* T2_TinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T2_TinderApp.swift; sourceTree = "<group>"; };
 		B36F8BA02AE6FF8C0012C2FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				B36F8B9E2AE6FF8C0012C2FE /* T2_TinderApp.swift */,
 				B36F8BA02AE6FF8C0012C2FE /* ContentView.swift */,
+				B33408A82AE93B8B00F38C14 /* DragState.swift */,
 				B36F8BCA2AE70A000012C2FE /* CardView.swift */,
 				B36F8BC82AE700400012C2FE /* Course.swift */,
 				B36F8BA22AE6FF8D0012C2FE /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36F8BC92AE700400012C2FE /* Course.swift in Sources */,
+				B33408A92AE93B8B00F38C14 /* DragState.swift in Sources */,
 				B36F8BA12AE6FF8C0012C2FE /* ContentView.swift in Sources */,
 				B36F8BCB2AE70A000012C2FE /* CardView.swift in Sources */,
 				B36F8B9F2AE6FF8C0012C2FE /* T2_TinderApp.swift in Sources */,
