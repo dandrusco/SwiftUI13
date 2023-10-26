@@ -17,6 +17,7 @@
 		B36F8BBC2AE6FF8D0012C2FE /* T2_TinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F8BBB2AE6FF8D0012C2FE /* T2_TinderUITestsLaunchTests.swift */; };
 		B36F8BC92AE700400012C2FE /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F8BC82AE700400012C2FE /* Course.swift */; };
 		B36F8BCB2AE70A000012C2FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F8BCA2AE70A000012C2FE /* CardView.swift */; };
+		B372B23A2AEAD7CD0081528F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B372B2392AEAD7CD0081528F /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		B36F8BBB2AE6FF8D0012C2FE /* T2_TinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T2_TinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B36F8BC82AE700400012C2FE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		B36F8BCA2AE70A000012C2FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B372B2392AEAD7CD0081528F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B36F8B9E2AE6FF8C0012C2FE /* T2_TinderApp.swift */,
+				B372B2392AEAD7CD0081528F /* Extension.swift */,
 				B36F8BA02AE6FF8C0012C2FE /* ContentView.swift */,
 				B33408A82AE93B8B00F38C14 /* DragState.swift */,
 				B36F8BCA2AE70A000012C2FE /* CardView.swift */,
@@ -269,6 +272,7 @@
 				B36F8BC92AE700400012C2FE /* Course.swift in Sources */,
 				B33408A92AE93B8B00F38C14 /* DragState.swift in Sources */,
 				B36F8BA12AE6FF8C0012C2FE /* ContentView.swift in Sources */,
+				B372B23A2AEAD7CD0081528F /* Extension.swift in Sources */,
 				B36F8BCB2AE70A000012C2FE /* CardView.swift in Sources */,
 				B36F8B9F2AE6FF8C0012C2FE /* T2_TinderApp.swift in Sources */,
 			);

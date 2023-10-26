@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
+    private let thresholds: CGFloat = 100
+    
     @GestureState private var dragState = DragState.none
     
+    @State private var lastCardIdx = 1
+    
     //Inicializamos un arrays de cartas que contengan todos nuestros cursos
-    var deck: [CardView] = {
+    @State var deck: [CardView] = {
         var cards = [CardView]()
         
         for idx in 0..<2{
@@ -20,6 +24,8 @@ struct ContentView: View {
         }
         return cards
     }()
+    
+    @State private var removalTransition = AnyTransition.leadingBotonAtRemoval
     
     var body: some View {
         VStack {
@@ -29,11 +35,24 @@ struct ContentView: View {
             ZStack {
                 ForEach(deck) { card in
                     card.zIndex(isTopCard(card: card) ? 1 : 0)
+                        .overlay(
+                            ZStack{
+                                Image(systemName: "xmark.circle.fill")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 120))
+                                    .opacity(dragState.translation.width < -thresholds && isTopCard(card: card) ? 1 : 0)
+                                Image(systemName: "heart.circle.fill")
+                                    .foregroundStyle(.red)
+                                    .font(.system(size: 120))
+                                    .opacity(dragState.translation.width > thresholds && isTopCard(card: card) ? 1 : 0)
+                            }
+                        )
                         .offset(x: isTopCard(card: card) ? dragState.translation.width : 0,
                                 y: isTopCard(card: card) ? dragState.translation.height : 0)
                         .scaleEffect(dragState.isDragging && isTopCard(card: card) ? 0.9 : 1.0)
                         .rotationEffect(Angle(degrees: Double(isTopCard(card: card) ? dragState.translation.width/10 : 0)))
                         .animation(.interpolatingSpring(stiffness: 200, damping: 100), value: dragState.translation)
+                        .transition(removalTransition)
                         .gesture(LongPressGesture(minimumDuration: 0.01)
                             .sequenced(before: DragGesture())
                             .updating($dragState, body: { (value, state, transaction) in
@@ -46,6 +65,21 @@ struct ContentView: View {
                                     break
                                 }
                             })
+                                .onChanged{ (value) in
+                                    guard case .second(true, let drag?) = value else {
+                                        return
+                                    }
+                                    removalTransition = drag.translation.width > 0 ? .trailingBottonAtRemoval : .leadingBotonAtRemoval
+                                }
+                                .onEnded{ (value) in
+                                    guard case .second(true, let drag?) = value else {
+                                        return
+                                    }
+                                    if drag.translation.width > thresholds || drag.translation.width < thresholds {
+                                        //Aqui podemos programar si al marcar un curso como X o como CORAZON se guarden en una lista
+                                        updateDesck()
+                                    }
+                                }
                         )
                 }
             }
@@ -61,6 +95,22 @@ struct ContentView: View {
             return false
         }
         return idx == 0
+    }
+    
+    //Funcion para actualizar las tarjetas a medida que se clasifican
+    private func updateDesck(){
+        //Eliminamos la carta
+        deck.removeFirst()
+        //Inclrementa la carta
+        lastCardIdx += 1
+        
+        //extraemos la nueva tarjeta del curso
+        let newCourse = courses[lastCardIdx % courses.count]
+        //Fabricamops la nueva carta
+        let newCardView = CardView(course: newCourse)
+        
+        //Le añadimos la nueva a la baraja
+        deck.append(newCardView)
     }
 }
 
@@ -111,3 +161,4 @@ struct BottonBarView: View {
         }.padding(15)
     }
 }
+
