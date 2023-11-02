@@ -14,6 +14,7 @@
 		B3C668A42AF02BA400BE5AD2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C668A32AF02BA400BE5AD2 /* Card.swift */; };
 		B3C668A62AF02BF500BE5AD2 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C668A52AF02BF500BE5AD2 /* Transaction.swift */; };
 		B3C668A92AF030E700BE5AD2 /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C668A82AF030E700BE5AD2 /* TransactionHistoryView.swift */; };
+		B3DB8CBD2AF4032C0060EB3E /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DB8CBC2AF4032C0060EB3E /* DragState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B3C668A32AF02BA400BE5AD2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B3C668A52AF02BF500BE5AD2 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		B3C668A82AF030E700BE5AD2 /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
+		B3DB8CBC2AF4032C0060EB3E /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				B3C668A82AF030E700BE5AD2 /* TransactionHistoryView.swift */,
 				B3C668962AF02B1500BE5AD2 /* ContentView.swift */,
+				B3DB8CBC2AF4032C0060EB3E /* DragState.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C668972AF02B1500BE5AD2 /* ContentView.swift in Sources */,
+				B3DB8CBD2AF4032C0060EB3E /* DragState.swift in Sources */,
 				B3C668A42AF02BA400BE5AD2 /* Card.swift in Sources */,
 				B3C668A92AF030E700BE5AD2 /* TransactionHistoryView.swift in Sources */,
 				B3C668A62AF02BF500BE5AD2 /* Transaction.swift in Sources */,
