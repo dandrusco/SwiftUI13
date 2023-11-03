@@ -23,7 +23,7 @@ struct Card: Identifiable {
     var image : String
 }
 
-let cards = [
+let tempCards = [
     Card(clientName: "Danilo Andrusco", number: "1212 1212 1212 1212", expirationDate: "01/24", type: .visa, image: "basic"),
     Card(clientName: "Patricia Tapia", number: "3434 3434 3434 3434", expirationDate: "03/25", type: .master, image: "gold"),
     Card(clientName: "Bruno Andrusco", number: "5656 5656 5656 5656", expirationDate: "05/25", type: .master, image: "platinum"),

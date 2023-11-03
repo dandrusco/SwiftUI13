@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var cards: [Card] = tempCards
+    
     @State var cardPresented = false
     
     @State var cardPressed = false
@@ -24,7 +26,7 @@ struct ContentView: View {
     //Modificamos el ofset para que cada una tenga mas offset que el anterior
     private func offset(for card: Card)->CGSize{
         //Creamos un indice de la tarjeta actual
-        guard let idx = cards.firstIndex(where: {$0.id == card.id}) else {
+        guard let idx = index(for: card) else {
             return CGSize() //(0,0)
         }
         
@@ -40,24 +42,75 @@ struct ContentView: View {
             }
         }
         
+        //Calcularemos si la estamos arrastrando para corregir la posicion
+        var pressedOffset = CGSize.zero
+        var dragOffset : CGFloat = 0
+        
+        if let dragIdx = dragState.idx, dragIdx == idx {
+            pressedOffset.height = dragState.isPressing ? -20 : 0
+            
+            switch dragState.translation.width {
+            case let width where width < -15:
+                pressedOffset.width = -25
+            case let width where width > 15:
+                pressedOffset.width = 25
+            default:
+                break
+            }
+            
+            dragOffset = dragState.translation.height
+        }
         
         //Obtenemos la pocision real del desplazamiento
-        return CGSize(width: 0, height: -offset * CGFloat(idx))
+        return CGSize(width: 0 + pressedOffset.width,
+                      height: -offset * CGFloat(idx) + pressedOffset.height + dragOffset)
     }
     
     //Invertiremos el otrden de las tarjetas
     private func zIndex(for card: Card) -> Double{
-        guard let idx = cards.firstIndex(where: {$0.id == card.id}) else {
+        guard let idx = index(for: card) else {
             return 0.0
         }
-        return -Double(idx)
+        
+        //Indice por defecto
+        let defaultIndex = -Double(idx)
+        
+        //Recuperamos el indice que se esta desplazando
+        if let dragIdx = dragState.idx,
+            dragIdx == idx {
+            
+            return defaultIndex + Double(dragState.translation.height / offset)
+        }
+        
+        return defaultIndex
     }
     
-    private func index(for card: Card) -> Int {
+    private func index(for card: Card) -> Int? {
         guard let idx = cards.firstIndex(where: {$0.id == card.id}) else{
-                return 0
+                return nil
         }
         return idx
+    }
+    
+    //Reeordenaremos las tarjetas al soltar
+    private func orderCards(for card: Card, dragOffset: CGSize){
+        guard let oldIdx = index(for: card) else{
+            return
+        }
+        
+        var newIdx = oldIdx - Int(dragOffset.height / offset)
+        
+        if(newIdx >= cards.count){
+            newIdx = cards.count - 1
+        }
+        if(newIdx < 0){
+            newIdx = 0
+        }
+        
+        let removedCard = cards.remove(at: oldIdx)
+        cards.insert(removedCard, at: newIdx)
+        
+        
     }
     
     var body: some View {
@@ -101,8 +154,7 @@ struct ContentView: View {
                                             guard case .second(true, let drag?) = value else{
                                                 return
                                             }
-                                            
-                                           //TODO: Reordenar las cartas
+                                            orderCards(for: c, dragOffset: drag.translation)
                                         })
                                     )
                             )
@@ -124,7 +176,7 @@ struct ContentView: View {
     private func animation(for card: Card) -> Animation {
         var delay = 0.0
         
-        if let idx = cards.firstIndex(where: {$0.id == card.id}){
+        if let idx = index(for: card){
             delay = Double(cards.count - idx)*0.2
         }
         return Animation.spring(response: 0.2, dampingFraction: 1, blendDuration: 0.2).delay(delay)
